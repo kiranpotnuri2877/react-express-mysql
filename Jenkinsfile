@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/kiranpotnuri2877/react-express-mysql.git'
-        BRANCH   = 'main'
+        BRANCH   = 'master'
     }
 
     stages {

@@ -15,6 +15,8 @@ services:
     build: ./node-express-server
     container_name: team-backend
     image: team-backend-image
+    env_file:
+      - ./node-express-server/.env
     ports:
       - "4000:8080"
     environment:
@@ -31,7 +33,7 @@ services:
     container_name: team-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: "123456"
       MYSQL_DATABASE: testdb
     ports:
       - "3306:3306"
